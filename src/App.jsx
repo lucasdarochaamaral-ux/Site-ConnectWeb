@@ -432,8 +432,8 @@ function App() {
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 {/* ✅ CORREÇÃO 2.1: Hierarquia tipográfica - H1 responsivo com base 32px (text-3xl) */}
-                <span className="text-white">Impulsione seu negócio</span>
-                {/* 🎨 CORREÇÃO CONTRASTE: "Impulsione seu negócio" em branco (#FFFFFF) */}
+                <span className="text-white">Impulsione seu negócio já</span>
+                {/* 🎨 CORREÇÃO CONTRASTE: "Impulsione seu negócio já" em branco (#FFFFFF) */}
                 <span className="block text-green-400 drop-shadow-lg font-black">
                   {/* 🎯 CORREÇÃO HERO: Mesmo tamanho para manter unidade visual */}
                   com um site profissional
