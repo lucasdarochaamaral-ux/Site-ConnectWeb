@@ -39,4 +39,3 @@ logs
 # Optional (common em projetos Vite)
 .cache/
 .temp/
-node_modules
