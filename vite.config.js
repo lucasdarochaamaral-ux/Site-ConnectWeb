@@ -5,11 +5,11 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Site-ConnectWeb/',  // ← LINHA ADICIONADA PARA GITHUB PAGES
+  base: '/Site-ConnectWeb/', // ← LINHA ADICIONADA PARA GITHUB PAGES
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+}) // ← FECHAMENTO CORRETO!
