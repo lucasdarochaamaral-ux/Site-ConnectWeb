@@ -23,8 +23,8 @@ import {
 } from 'lucide-react'
 import './App.css'
 
-import heroMainImage from './assets/images/hero/hero-main.jpg'
-import heroSecondaryImage from './assets/images/hero/hero-secondary.jpg'
+import heroMainImage from './assets/images/hero/hero-main.png'
+import heroSecondaryImage from './assets/images/hero/hero-secondary.png'
 import responsiveDevicesImage from './assets/images/mockups/responsive-devices.jpg'
 import websiteShowcaseImage from './assets/images/mockups/website-showcase.jpg'
 import happyClientsImage from './assets/images/testimonials/happy-clients.jpg'
@@ -179,8 +179,8 @@ function App() {
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Painel de Gerenciamento",
-      description: "Interface fácil para gerenciar seu site"
+      title: "Provedor de alta Velocidade",
+      description: "Página com carregamento rápido e estável "
     },
     {
       icon: <Headphones className="w-8 h-8" />,
@@ -281,16 +281,11 @@ function App() {
           {/* ✅ CORREÇÃO 1.1: Padding lateral mobile mínimo 20px (px-5 = 20px) */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className={`bg-gradient-to-r from-blue-600 to-green-500 rounded-lg flex items-center justify-center transition-all duration-300 ${
-                isScrolled ? 'w-8 h-8' : 'w-10 h-10'
-              }`}>
-                <Globe className={`text-white transition-all duration-300 ${
-                  isScrolled ? 'w-5 h-5' : 'w-6 h-6'
-                }`} />
-              </div>
-              <span className={`font-bold transition-all duration-300 ${
-                isScrolled ? 'text-xl' : 'text-2xl'
-              } ${isDarkMode ? 'text-white' : 'text-blue-900'}`}>ConnectWeb</span>
+              <img
+  src="https://i.ibb.co/BHV8rzjH/Connect-Web-980-x-220-px-1280-x-220-px-12.png"
+  alt="Logo ConnectWeb"
+  className={`transition-all duration-300 ${isScrolled ? 'w-47 h-auto' : 'w-50 h-auto'}`}
+/>
             </div>
             
             {/* Desktop Menu */}
@@ -422,7 +417,7 @@ function App() {
           loading="eager"
         />
         {/* Overlay sutil para legibilidade do texto */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="relative container mx-auto px-5 sm:px-6 lg:px-8 py-20 lg:py-32">
           {/* ✅ CORREÇÃO 1.2: Padding lateral consistente na hero section */}
@@ -430,16 +425,9 @@ function App() {
             <div className="space-y-8">
               {/* 🚫 CORREÇÃO 1: Botão "Seu Novo Site Começa Aqui!" removido conforme solicitado */}
               
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                {/* ✅ CORREÇÃO 2.1: Hierarquia tipográfica - H1 responsivo com base 32px (text-3xl) */}
-                <span className="text-white">Impulsione seu negócio já</span>
-                {/* 🎨 CORREÇÃO CONTRASTE: "Impulsione seu negócio já" em branco (#FFFFFF) */}
-                <span className="block text-green-400 drop-shadow-lg font-black">
-                  {/* 🎯 CORREÇÃO HERO: Mesmo tamanho para manter unidade visual */}
-                  com um site profissional
-                </span> 
-                <span className="text-white">e moderno</span>
-              </h1>
+<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
+  Impulsione seu negócio <span className="text-green-400 drop-shadow-lg font-black">com um site moderno </span> e presonalizado.
+</h1>
               
               <p className="text-base sm:text-lg lg:text-xl text-blue-100 font-medium leading-relaxed">
                 {/* ✅ CORREÇÃO 2.2: Texto corpo base 16px (text-base) com responsividade */}
