@@ -23,12 +23,16 @@ import {
 } from 'lucide-react'
 import './App.css'
 
-import heroMainImage from './assets/images/hero/hero-main.png'
-import heroSecondaryImage from './assets/images/hero/hero-secondary.png'
+import heroMainImage from './assets/images/hero/hero-main.jpg'
+import heroSecondaryImage from './assets/images/hero/hero-secondary.jpg'
 import responsiveDevicesImage from './assets/images/mockups/responsive-devices.jpg'
 import websiteShowcaseImage from './assets/images/mockups/website-showcase.jpg'
 import happyClientsImage from './assets/images/testimonials/happy-clients.jpg'
 import businessPeopleImage from './assets/images/testimonials/business-people.jpg'
+import Portifolio1 from './assets/images/mockups/Portifolio1.jpg'
+import Portifolio2 from './assets/images/mockups/Portifolio2.jpg'
+import Portifolio3 from './assets/images/mockups/Portifolio3.jpg'
+import Portifolio4 from './assets/images/mockups/Portifolio4.jpg'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -137,8 +141,26 @@ function App() {
   }
 
   // 🖼️ CORREÇÃO CARROSSEL: Arrays de imagens para os carrosséis
-  const carouselImages1 = [responsiveDevicesImage, websiteShowcaseImage]
-  const carouselImages2 = [websiteShowcaseImage, responsiveDevicesImage]
+// 🖼️ CORREÇÃO CARROSSEL: Arrays de imagens para os carrosséis (agora com 3 imagens)
+// 🖼️ CORREÇÃO CARROSSEL: Arrays de imagens para os carrosséis (agora com 6 imagens)
+const carouselImages1 = [
+  { image: responsiveDevicesImage, link: "https://www.connectcar123.com" },
+  { image: Portifolio4, link: "https://www.google.com" },
+  { image: Portifolio1, link: "https://www.connectcar123.com" },
+  { image: Portifolio2, link: "https://www.connectcar123.com" },
+  { image: Portifolio3, link: "https://www.connectcar123.com" },
+]
+
+const carouselImages2 = [
+  { image: websiteShowcaseImage, link: "https://www.connectcar123.com" },
+  { image: responsiveDevicesImage, link: "https://www.connectcar123.com" },
+  { image: Portifolio4, link: "https://www.connectcar123.com" },
+  { image: Portifolio3, link: "https://www.connectcar123.com" },
+  { image: Portifolio2, link: "https://www.connectcar123.com" },
+  { image: Portifolio1, link: "https://www.connectcar123.com" }
+]
+
+
 
   // 🖼️ CORREÇÃO CARROSSEL: Rotação automática das imagens
   useEffect(() => {
@@ -169,8 +191,8 @@ function App() {
     },
     {
       icon: <Palette className="w-8 h-8" />,
-      title: "Design Moderno",
-      description: "Layouts atuais e profissionais para sua empresa"
+      title: "Tema Escuro e Claro",
+      description: "Site com botão no cabeçalho para alterar cor de fundo (Dark e Light)"
     },
     {
       icon: <MessageCircle className="w-8 h-8" />,
@@ -197,11 +219,12 @@ function App() {
       description: "Perfeito para pequenas empresas que querem marcar presença online",
       features: [
         "Site responsivo profissional",
-        "Até 5 páginas",
+        "Personalizado",
         "Formulário de contato",
         "WhatsApp integrado",
         "Certificado SSL",
-        "Suporte técnico"
+        "Suporte técnico",
+        "Tema dark e light (botão no cabeçalho)"
       ],
       highlight: false
     },
@@ -212,12 +235,12 @@ function App() {
       description: "Solução completa com domínio e e-mails profissionais inclusos",
       features: [
         "Tudo do Plano Essencial",
-        "Domínio .com.br incluso",
+        "Domínio grátis por 1 ano",
         "3 contas de e-mail profissionais",
-        "Até 10 páginas",
-        "Blog integrado",
-        "Analytics básico",
-        "Backup automático"
+        "Integração de e-mail com Gmail",
+        "Personalizações Excusivas",
+        "SEO otimizado",
+        "Modificações Agendadas"
       ],
       highlight: true
     }
@@ -238,7 +261,7 @@ function App() {
     },
     {
       name: "Ana Costa",
-      company: "Costa Estética",
+      company: "Acedêmia Senior",
       rating: 5,
       comment: "Site lindo e funcional. Os clientes elogiam muito o design e facilidade de uso."
     },
@@ -253,11 +276,11 @@ function App() {
   const faqItems = [
     {
       question: "Quanto tempo leva para criar meu site?",
-      answer: "Normalmente entre 5 a 10 dias úteis, dependendo da complexidade e do plano escolhido."
+      answer: "Entregamos seu site em até 10 dias úteis, personalizado e com seu domínio e e-mails criados."
     },
     {
       question: "Posso fazer alterações no site depois de pronto?",
-      answer: "Sim! Você terá acesso ao painel de gerenciamento para fazer alterações básicas, e nosso suporte está sempre disponível."
+      answer: "Sim, você pode escolher imagens, textos, cores e muito mais. Aproveite o Plano Popular para realizar modificações agendadas."
     },
     {
       question: "O site funciona em celulares?",
@@ -266,6 +289,10 @@ function App() {
     {
       question: "Vocês oferecem suporte após a entrega?",
       answer: "Sim, oferecemos suporte técnico contínuo para todos os nossos clientes."
+    },
+    {
+      question: "Como funciona o programa de parceria de ConhectWeb?",
+      answer: "Indique e ganhe! Receba R$100,00 a cada indicação que se consolidar em cliente, receba por PIX ou desconte em seu plano."
     }
   ]
 
@@ -282,7 +309,7 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <img
-  src="https://i.ibb.co/BHV8rzjH/Connect-Web-980-x-220-px-1280-x-220-px-12.png"
+  src="https://i.ibb.co/s9KTktyS/CABE-ALHO-RODA-P-LOGO-DEFINITIVO.png"
   alt="Logo ConnectWeb"
   className={`transition-all duration-300 ${isScrolled ? 'w-47 h-auto' : 'w-50 h-auto'}`}
 />
@@ -426,7 +453,7 @@ function App() {
               {/* 🚫 CORREÇÃO 1: Botão "Seu Novo Site Começa Aqui!" removido conforme solicitado */}
               
 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
-  Impulsione seu negócio <span className="text-green-400 drop-shadow-lg font-black">com um site moderno </span> e presonalizado.
+Seu Negócio <span className="text-green-400 drop-shadow-lg font-black">Com um Site Moderno </span> e Presonalizado.
 </h1>
               
               <p className="text-base sm:text-lg lg:text-xl text-blue-100 font-medium leading-relaxed">
@@ -458,7 +485,7 @@ function App() {
                     <Monitor className="w-12 h-12 text-green-400 drop-shadow-lg" />
                     <div>
                       <h3 className="text-2xl font-black text-white drop-shadow-md">Sites Completos</h3>
-                      <p className="text-green-300 font-bold text-lg drop-shadow-sm">a partir de R$ 38,80/mês</p>
+                      <p className="text-green-300 font-bold text-lg drop-shadow-sm">apenas R$ 38,80/mês</p>
                     </div>
                   </div>
                 </CardContent>
@@ -490,18 +517,18 @@ function App() {
           style={{ backgroundImage: `url(${heroSecondaryImage})` }}
         ></div>
         {/* Overlay sutil apenas para garantir legibilidade do texto */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/0"></div>
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-white drop-shadow-lg">
               {/* 🎯 CORREÇÃO 2: Texto branco com sombra para contraste na imagem livre */}
               Não importa se é empresa pequena ou grande.
               <br />
-              <span className="text-green-400 drop-shadow-lg">O que interessa para nós é fazer seu negócio crescer.</span>
+              <span className="text-green-400 drop-shadow-lg">Nós temos o site com a identidade que você precisa.</span>
             </h2>
             <p className="text-xl text-white drop-shadow-md">
               {/* 🎯 CORREÇÃO 2: Parágrafo com texto branco e sombra para contraste */}
-              Você trabalhou duro para construir sua empresa. Nós trabalhamos duro para criar o site perfeito para ela.
+              Com a gente você tem acesso a um site personalizado que vai de encontro ao perfil da sua empresa.
             </p>
           </div>
         </div>
@@ -519,7 +546,7 @@ function App() {
               isDarkMode ? 'text-gray-100' : 'text-gray-800'
             }`}>
               {/* ✅ CORREÇÃO 2.3: H2 com base 24px (text-2xl) responsivo */}
-              Sites profissionais com tudo que sua empresa precisa
+              São muitas as vantagens de possuir um site com a ConnectWeb
             </h2>
             <div className="w-24 h-1 bg-green-500 mx-auto"></div>
           </div>
@@ -665,7 +692,7 @@ function App() {
               isDarkMode ? 'text-gray-100' : 'text-gray-800'
             }`}>
               {/* ✅ CORREÇÃO 2.8: H2 hierarquia + contraste + modo escuro */}
-              Veja alguns dos nossos trabalhos
+              Acesse e veja qual a melhor opção para o seu negócio.
             </h2>
             <p className={`text-base lg:text-lg max-w-3xl mx-auto leading-relaxed transition-colors duration-200 ${
               isDarkMode ? 'text-gray-300' : 'text-gray-600'
@@ -680,19 +707,42 @@ function App() {
             <div className="fade-in-up-delay-1 relative overflow-hidden rounded-lg">
               {/* 🖼️ CORREÇÃO CARROSSEL: Carrossel automático com efeito 3D */}
               <div className="relative h-80 lg:h-96">
-                {carouselImages1.map((image, index) => (
-                  <img 
-                    key={index}
-                    src={image} 
-                    alt={`Mockup ${index + 1} de sites responsivos exibidos em diferentes dispositivos mostrando adaptação perfeita`}
-                    className={`absolute inset-0 w-full h-full object-cover rounded-lg shadow-xl transition-all duration-1000 ease-in-out transform hover:scale-105 hover:rotate-1 hover:shadow-2xl ${
-                      index === currentCarouselImage1 
-                        ? 'opacity-100 translate-x-0' 
-                        : 'opacity-0 translate-x-full'
-                    }`}
-                    loading="lazy"
-                  />
-                ))}
+                <div className="relative h-80 lg:h-96">
+  {carouselImages1.map((item, index) => (
+    <a 
+      key={index}
+      href={item.link} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className={`absolute inset-0 w-full h-full block transition-all duration-1000 ease-in-out transform hover:scale-105 hover:rotate-1 hover:shadow-2xl ${
+        index === currentCarouselImage1 
+          ? 'opacity-100 translate-x-0' 
+          : 'opacity-0 translate-x-full'
+      }`}
+    >
+      <img 
+        src={item.image} 
+        alt={`Mockup ${index + 1} de sites responsivos exibidos em diferentes dispositivos mostrando adaptação perfeita`}
+        className="w-full h-full object-cover rounded-lg"
+        loading="lazy"
+      />
+    </a>
+  ))}
+  {/* Indicadores do carrossel (mantenha igual) */}
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    {carouselImages1.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentCarouselImage1(index)}
+        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+          index === currentCarouselImage1 
+            ? 'bg-green-500 scale-125' 
+            : 'bg-white/50 hover:bg-white/75'
+        }`}
+      />
+    ))}
+  </div>
+</div>
                 {/* Indicadores do carrossel */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {carouselImages1.map((_, index) => (
@@ -741,6 +791,12 @@ function App() {
                     isDarkMode ? 'text-gray-300' : 'text-gray-700'
                   }`}>SEO otimizado</span>
                 </li>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className={`text-sm lg:text-base transition-colors duration-200 ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>Tema escuro e claro (botão no cabeçalho)</span>
+                </li>
               </ul>
               <Button className="min-h-[48px] bg-green-500 hover:bg-green-600 text-white transition-all duration-200 ease-in-out hover:-translate-y-1 interactive-element"
                 onClick={() => window.open('https://api.whatsapp.com/send?phone=5511932691882&text=Ol%C3%A1,%20tudo%20bem!%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20rastreamento.&utm_source=site&utm_medium=botao&utm_campaign=geral', '_blank')}>
@@ -763,8 +819,8 @@ function App() {
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
                 {/* 🎨 CORREÇÃO: Texto azul convertido para cinza escuro */}
-                Já criamos sites para advogados, médicos, consultores, lojas, restaurantes e muito mais. 
-                Cada projeto é único e personalizado.
+                Já criamos sites para acadêmias, Dentista, Fisioterapeutas, lojas, restaurantes e muito mais. 
+                Cada projeto é pensado e desenvolvido para sua empresa.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className={`text-center p-4 rounded-lg transition-colors duration-300 ${
@@ -788,11 +844,18 @@ function App() {
               </div>
             </div>
             <div className="lg:order-1">
-              <img 
-                src={websiteShowcaseImage} 
-                alt="Showcase de sites profissionais"
-                className="w-full rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105"
-              />
+              <a 
+  href="https://www.connectcar123.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="block"
+>
+  <img 
+    src={websiteShowcaseImage} 
+    alt="Showcase de sites profissionais"
+    className="w-full rounded-lg shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105"
+  />
+</a>
               {/* 🖼️ CORREÇÃO: Animação de zoom suave adicionada (sem rotação) */}
             </div>
           </div>
@@ -867,7 +930,7 @@ function App() {
                   <div>
                     <h3 className={`text-2xl font-bold transition-colors duration-300 ${
                       isDarkMode ? 'text-gray-100' : 'text-gray-800'
-                    }`}>desde 2020</h3>
+                    }`}>5+ anos no mercado</h3>
                     <p className={`transition-colors duration-300 ${
                       isDarkMode ? 'text-gray-300' : 'text-gray-600'
                     }`}>criando sites profissionais</p>
@@ -881,10 +944,10 @@ function App() {
                   <div>
                     <h3 className={`text-2xl font-bold transition-colors duration-300 ${
                       isDarkMode ? 'text-gray-100' : 'text-gray-800'
-                    }`}>mais de 200</h3>
+                    }`}>Satisfação garantida</h3>
                     <p className={`transition-colors duration-300 ${
                       isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                    }`}>empresas atendidas</p>
+                    }`}>empresas atendidas com excelência</p>
                   </div>
                 </div>
                 
@@ -899,10 +962,10 @@ function App() {
                   <div>
                     <h3 className={`text-2xl font-bold transition-colors duration-300 ${
                       isDarkMode ? 'text-gray-100' : 'text-gray-800'
-                    }`}>EXPERIÊNCIA</h3>
+                    }`}>Experiência e compromisso</h3>
                     <p className={`transition-colors duration-300 ${
                       isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                    }`}>e ESTRUTURA para criar sites em todo Brasil</p>
+                    }`}>Profissionais focados no cliente e em seus projetos</p>
                   </div>
                 </div>
               </div>
@@ -979,7 +1042,7 @@ function App() {
                 {/* 🎨 CORREÇÃO 5: Azul convertido para cinza escuro + modo escuro */}
                 Venha empreender conosco! Amplie seus horizontes e ganhos sendo um parceiro ConnectWeb, 
                 uma empresa em crescimento no mercado de criação de sites profissionais, 
-                reconhecida pela qualidade e com mais de 200 clientes atendidos desde 2020.
+                reconhecida pela qualidade e com mais de 200 sites online.
               </p>
               <Button className="bg-green-500 hover:bg-green-600 text-white" size="lg"
                 onClick={() => window.open('https://api.whatsapp.com/send?phone=5511932691882&text=Ol%C3%A1,%20tudo%20bem!%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20rastreamento.&utm_source=site&utm_medium=botao&utm_campaign=geral', '_blank')}>
@@ -1077,7 +1140,7 @@ function App() {
               <CardContent className="p-6">
                 <MessageCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
-                <p className="text-blue-100">(11) 99999-9999</p>
+                <p className="text-blue-100">Atendimento rápido e exclusivo</p>
               </CardContent>
             </Card>
 
@@ -1085,7 +1148,7 @@ function App() {
               <CardContent className="p-6">
                 <Headphones className="w-12 h-12 text-blue-300 mx-auto mb-4" />
                 <h3 className="text-lg font-bold mb-2">Fale Conosco</h3>
-                <p className="text-blue-100">Atendimento</p>
+                <p className="text-blue-100">Nos diga como podemos melhorar</p>
               </CardContent>
             </Card>
 
@@ -1093,7 +1156,7 @@ function App() {
               <CardContent className="p-6">
                 <Monitor className="w-12 h-12 text-blue-300 mx-auto mb-4" />
                 <h3 className="text-lg font-bold mb-2">Demonstração</h3>
-                <p className="text-blue-100">Agendar</p>
+                <p className="text-blue-100">Acesse nossos modelos de site</p>
               </CardContent>
             </Card>
 
@@ -1101,7 +1164,7 @@ function App() {
               <CardContent className="p-6">
                 <Mail className="w-12 h-12 text-blue-300 mx-auto mb-4" />
                 <h3 className="text-lg font-bold mb-2">E-mail</h3>
-                <p className="text-blue-100">Contato</p>
+                <p className="text-blue-100">Contate-nos através do nosso e-mail</p>
               </CardContent>
             </Card>
 
@@ -1109,7 +1172,7 @@ function App() {
               <CardContent className="p-6">
                 <Globe className="w-12 h-12 text-blue-300 mx-auto mb-4" />
                 <h3 className="text-lg font-bold mb-2">Atendimento</h3>
-                <p className="text-blue-100">Online</p>
+                <p className="text-blue-100">Suporte ágil e especializado</p>
               </CardContent>
             </Card>
           </div>
@@ -1167,10 +1230,10 @@ function App() {
                     <div>
                       <h4 className={`font-semibold transition-colors duration-300 ${
                         isDarkMode ? 'text-gray-100' : 'text-gray-800'
-                      }`}>Suporte Completo</h4>
+                      }`}>Tema Claro e Escuro</h4>
                       <p className={`transition-colors duration-300 ${
                         isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                      }`}>Acompanhamento durante todo o projeto</p>
+                      }`}>Cor de fundo adaptável com um clique (botão no cabeçalho).</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -1185,7 +1248,7 @@ function App() {
                       }`}>Entrega Rápida</h4>
                       <p className={`transition-colors duration-300 ${
                         isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                      }`}>Seu site pronto em até 15 dias</p>
+                      }`}>Seu site pronto em até 10 dias úteis</p>
                     </div>
                   </div>
                 </div>
@@ -1290,9 +1353,9 @@ function App() {
         <div className="relative container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold">
-              Faça mais do que sonha para sua empresa.
+              Aumente o alcance da sua empresa online.
               <br />
-              A gente cria o site perfeito para ela.
+          
             </h2>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1310,8 +1373,7 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
+{/* Footer */}
       <footer className={`py-12 border-t transition-colors duration-300 ${
         isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
       }`}>
@@ -1319,33 +1381,39 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-green-500 rounded-lg flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-white" />
+                <div className="flex items-center justify-center">
+                  <img 
+                    src="https://i.ibb.co/s9KTktyS/CABE-ALHO-RODA-P-LOGO-DEFINITIVO.png" 
+                    alt="ConnectWeb" 
+                    className="h-10 w-auto"
+                  />
                 </div>
                 <span className={`text-2xl font-bold transition-colors duration-300 ${
                   isDarkMode ? 'text-gray-100' : 'text-gray-800'
-                }`}>ConnectWeb</span>
+                }`}></span>
               </div>
               <p className={`mb-4 transition-colors duration-300 ${
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                Criando sites profissionais que fazem sua empresa crescer online.
+                Criando sites profissionais que fazem sua empresa crescer digitalmente.
               </p>
               <div className="flex space-x-4">
-                {/* 📍 CORREÇÃO 6: Removido Facebook e e-mail, adicionado Google Meu Negócio */}
+                {/* 📍 Google Meu Negócio */}
                 <a 
                   href="https://www.google.com/maps/place/Rastreamento+Automotivo+ConnectCar/@-23.8886333,-46.7393688,254391m/data=!3m2!1e3!4b1!4m6!3m5!1s0x6b94f1ca0b7a1f61:0xf0b8819b67f7b3a3!8m2!3d-23.8886334!4d-46.7393688!16s%2Fg%2F11rq8w4xzg?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center hover:bg-red-200 transition-colors duration-300 hover:scale-110 transform"
+                  className="bg-white rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors duration-300 hover:scale-105 transform border border-gray-300 shadow-sm p-2"
                   aria-label="Google Meu Negócio ConnectWeb"
                 >
-                  {/* 📍 CORREÇÃO: Ícone oficial do Google Meu Negócio */}
-                  <svg className="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    <circle cx="12" cy="8" r="2" fill="white"/>
-                    <path d="M12 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="currentColor"/>
-                  </svg>
+                  {/* Imagem do Google Meu Negócio com dimensões 400x100 */}
+                  <img 
+                    src="https://i.ibb.co/ynMGF25p/RODA-P-IMAGEM-GOOGLE-MEU-NEG-CIO-DEFINITIVA.png" 
+                    alt="Google Meu Negócio" 
+                    className="w-[200px] h-[30px] object-contain"
+                    width="400"
+                    height="100"
+                  />
                 </a>
               </div>
             </div>
@@ -1353,7 +1421,7 @@ function App() {
             <div>
               <h3 className={`text-lg font-bold mb-4 transition-colors duration-300 ${
                 isDarkMode ? 'text-gray-100' : 'text-gray-800'
-              }`}>SITES PROFISSIONAIS</h3>
+              }`}>Sites Profissionais</h3>
               <ul className={`space-y-2 transition-colors duration-300 ${
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
@@ -1366,7 +1434,7 @@ function App() {
             <div>
               <h3 className={`text-lg font-bold mb-4 transition-colors duration-300 ${
                 isDarkMode ? 'text-gray-100' : 'text-gray-800'
-              }`}>SERVIÇOS</h3>
+              }`}>Serviços</h3>
               <ul className={`space-y-2 transition-colors duration-300 ${
                 isDarkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
@@ -1423,7 +1491,7 @@ function App() {
               ? 'border-gray-700 text-gray-300' 
               : 'border-gray-200 text-gray-600'
           }`}>
-            <p>&copy; 2024 ConnectWeb. Todos os direitos reservados.</p>
+            <p>&copy; 2026 ConnectWeb. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
