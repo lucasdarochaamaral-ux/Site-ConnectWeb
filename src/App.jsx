@@ -524,7 +524,7 @@ Seu Negócio <span className="text-green-400 drop-shadow-lg font-black">Com um S
               {/* 🎯 CORREÇÃO 2: Texto branco com sombra para contraste na imagem livre */}
               Não importa se é empresa pequena ou grande.
               <br />
-              <span className="text-green-400 drop-shadow-lg">Nós temos o site com a identidade que você precisa.</span>
+              <span className="text-green-400 drop-shadow-lg">Temos o site com a identidade que você precisa.</span>
             </h2>
             <p className="text-xl text-white drop-shadow-md">
               {/* 🎯 CORREÇÃO 2: Parágrafo com texto branco e sombra para contraste */}
@@ -1125,59 +1125,69 @@ Seu Negócio <span className="text-green-400 drop-shadow-lg font-black">Com um S
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contato" className="py-20 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Atendimento ConnectWeb
-            </h2>
-            <div className="w-24 h-1 bg-green-500 mx-auto"></div>
-          </div>
+      {/* {/* Contact Section */}
+<section id="contato" className="py-20 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        Atendimento ConnectWeb
+      </h2>
+      <div className="w-24 h-1 bg-green-500 mx-auto"></div>
+    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <Card className="bg-white/10 backdrop-blur-sm border-green-500 border-2 text-white text-center hover:bg-white/20 transition-all">
-              <CardContent className="p-6">
-                <MessageCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
-                <p className="text-blue-100">Atendimento rápido e exclusivo</p>
-              </CardContent>
-            </Card>
+    <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <a href="https://api.whatsapp.com/send?phone=5511932691882&text=Ol%C3%A1,%20tudo%20bem!%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20rastreamento.&utm_source=site&utm_medium=botao&utm_campaign=geral" target="_blank" rel="noopener noreferrer" className="block">
+        <Card className="bg-white/10 backdrop-blur-sm border-green-500 border-2 text-white text-center hover:bg-white/20 transition-all cursor-pointer">
+          <CardContent className="p-6">
+            <MessageCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+            <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
+            <p className="text-blue-100">Atendimento rápido e exclusivo</p>
+          </CardContent>
+        </Card>
+      </a>
 
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all">
-              <CardContent className="p-6">
-                <Headphones className="w-12 h-12 text-blue-300 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">Fale Conosco</h3>
-                <p className="text-blue-100">Nos diga como podemos melhorar</p>
-              </CardContent>
-            </Card>
+      <a href="https://www.connectcar123.com" target="_blank" rel="noopener noreferrer" className="block">
+        <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all cursor-pointer">
+          <CardContent className="p-6">
+            <Headphones className="w-12 h-12 text-blue-300 mx-auto mb-4" />
+            <h3 className="text-lg font-bold mb-2">Fale Conosco</h3>
+            <p className="text-blue-100">Deixe uma sugestão</p>
+          </CardContent>
+        </Card>
+      </a>
 
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all">
-              <CardContent className="p-6">
-                <Monitor className="w-12 h-12 text-blue-300 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">Demonstração</h3>
-                <p className="text-blue-100">Acesse nossos modelos de site</p>
-              </CardContent>
-            </Card>
+      <a href="https://www.connectcar123.com" target="_blank" rel="noopener noreferrer" className="block">
+        <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all cursor-pointer">
+          <CardContent className="p-6">
+            <Monitor className="w-12 h-12 text-blue-300 mx-auto mb-4" />
+            <h3 className="text-lg font-bold mb-2">Demonstração</h3>
+            <p className="text-blue-100">Acesse nossos modelos de site</p>
+          </CardContent>
+        </Card>
+      </a>
 
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all">
-              <CardContent className="p-6">
-                <Mail className="w-12 h-12 text-blue-300 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">E-mail</h3>
-                <p className="text-blue-100">Contate-nos através do nosso e-mail</p>
-              </CardContent>
-            </Card>
+      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="block">
+        <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all cursor-pointer">
+          <CardContent className="p-6">
+            <Mail className="w-12 h-12 text-blue-300 mx-auto mb-4" />
+            <h3 className="text-lg font-bold mb-2">E-mail</h3>
+            <p className="text-blue-100">Contate-nos através do e-mail</p>
+          </CardContent>
+        </Card>
+      </a>
 
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all">
-              <CardContent className="p-6">
-                <Globe className="w-12 h-12 text-blue-300 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">Atendimento</h3>
-                <p className="text-blue-100">Suporte ágil e especializado</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <a href="https://www.connectcar123.com" target="_blank" rel="noopener noreferrer" className="block">
+        <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/20 transition-all cursor-pointer">
+          <CardContent className="p-6">
+            <Globe className="w-12 h-12 text-blue-300 mx-auto mb-4" />
+            <h3 className="text-lg font-bold mb-2">Atendimento</h3>
+            <p className="text-blue-100">Tire sua dúvida com a gente</p>
+          </CardContent>
+        </Card>
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* Contact Form Section */}
       <section id="formulario" className={`py-20 transition-colors duration-300 ${
